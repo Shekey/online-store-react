@@ -3,8 +3,8 @@ let initialState = {
 }
 export default function (state = initialState, action) {
   switch (action.type) {
-    case 'GET_CART_ITEMS':
-      return { ...state, allCartItems: action.payload }
+    case 'GET_CATEGORIES_HOMEPAGE':
+      return { ...state, categoriesHomePage: action.payload }
     default:
       return state;
   }
