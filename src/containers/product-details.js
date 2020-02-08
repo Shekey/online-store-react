@@ -4,6 +4,7 @@ class ProductDetails extends Component {
 
     componentDidMount() {
         console.log(this.props.match.params.id);
+        this.importScripts();
     }
 
     handleClickPlus() {
@@ -22,6 +23,16 @@ class ProductDetails extends Component {
           }
           else { effect.value--; }return false;
     }
+
+    importScripts() {
+        // const script1 = document.createElement("script");
+        // const script = document.createElement("script");
+        // script1.src = "js/active.js";
+        // script.src = "js/bootstrap.min.js";
+        // document.body.appendChild(script1);
+        // document.body.appendChild(script);
+    }
+
     render() {
         return (
             <div className="single-product-area section-padding-100 clearfix">
@@ -45,34 +56,34 @@ class ProductDetails extends Component {
                             <div className="single_product_thumb">
                                 <div id="product_details_slider" className="carousel slide" data-ride="carousel">
                                     <ol className="carousel-indicators">
-                                        <li className="active" data-target="#product_details_slider" data-slide-to="0" style={{ backgroundImage: 'url(img/product-img/pro-big-1.jpg)' }}>
+                                        <li className="active" data-target="#product_details_slider" data-slide-to="0" style={{ backgroundImage: 'url(/img/product-img/pro-big-1.jpg)' }}>
                                         </li>
-                                        <li data-target="#product_details_slider" data-slide-to="1" style={{ backgroundImage: 'url(img/product-img/pro-big-2.jpg)' }}>
+                                        <li data-target="#product_details_slider" data-slide-to="1" style={{ backgroundImage: 'url(/img/product-img/pro-big-2.jpg)' }}>
                                         </li>
-                                        <li data-target="#product_details_slider" data-slide-to="2" style={{ backgroundImage: 'url(img/product-img/pro-big-3.jpg)' }}>
+                                        <li data-target="#product_details_slider" data-slide-to="2" style={{ backgroundImage: 'url(/img/product-img/pro-big-3.jpg)' }}>
                                         </li>
-                                        <li data-target="#product_details_slider" data-slide-to="3" style={{ backgroundImage: 'url(img/product-img/pro-big-4.jpg)' }}>
+                                        <li data-target="#product_details_slider" data-slide-to="3" style={{ backgroundImage: 'url(/img/product-img/pro-big-4.jpg)' }}>
                                         </li>
                                     </ol>
                                     <div className="carousel-inner">
                                         <div className="carousel-item active">
-                                            <a className="gallery_img" href="img/product-img/pro-big-1.jpg">
-                                                <img className="d-block w-100" src="img/product-img/pro-big-1.jpg" alt="First slide" />
+                                            <a className="gallery_img" href="/img/product-img/pro-big-1.jpg">
+                                                <img className="d-block w-100" src="/img/product-img/pro-big-1.jpg" alt="First slide" />
                                             </a>
                                         </div>
                                         <div className="carousel-item">
-                                            <a className="gallery_img" href="img/product-img/pro-big-2.jpg">
-                                                <img className="d-block w-100" src="img/product-img/pro-big-2.jpg" alt="Second slide" />
+                                            <a className="gallery_img" href="/img/product-img/pro-big-2.jpg">
+                                                <img className="d-block w-100" src="/img/product-img/pro-big-2.jpg" alt="Second slide" />
                                             </a>
                                         </div>
                                         <div className="carousel-item">
-                                            <a className="gallery_img" href="img/product-img/pro-big-3.jpg">
-                                                <img className="d-block w-100" src="img/product-img/pro-big-3.jpg" alt="Third slide" />
+                                            <a className="gallery_img" href="/img/product-img/pro-big-3.jpg">
+                                                <img className="d-block w-100" src="/img/product-img/pro-big-3.jpg" alt="Third slide" />
                                             </a>
                                         </div>
                                         <div className="carousel-item">
-                                            <a className="gallery_img" href="img/product-img/pro-big-4.jpg">
-                                                <img className="d-block w-100" src="img/product-img/pro-big-4.jpg" alt="Fourth slide" />
+                                            <a className="gallery_img" href="/img/product-img/pro-big-4.jpg">
+                                                <img className="d-block w-100" src="/img/product-img/pro-big-4.jpg" alt="Fourth slide" />
                                             </a>
                                         </div>
                                     </div>
@@ -111,7 +122,7 @@ class ProductDetails extends Component {
                                         <p>Qty</p>
                                         <div className="quantity">
                                             <span className="qty-minus" onClick={() => this.handleClickMinus()}><i className="fa fa-caret-down" aria-hidden="true"></i></span>
-                                            <input type="number" className="qty-text" id="qty" step="1" min="1" max="300" name="quantity" value="1" />
+                                            <input type="number" className="qty-text" id="qty" step="1" min="1" max="300" name="quantity" value="1" readOnly />
                                             <span className="qty-plus" onClick={() => this.handleClickPlus()}><i className="fa fa-caret-up" aria-hidden="true"></i></span>
                                         </div>
                                     </div>

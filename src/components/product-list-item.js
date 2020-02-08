@@ -22,8 +22,20 @@ const ProductListItem = (props) => {
               ))
             : null
             }
+
+            {
+                props.data && props.data.length > 0 ?
+                 importScripts()
+                :null
+            }
         </React.Fragment>
     );
+}
+
+function importScripts() {
+    const script1 = document.createElement("script");
+    script1.src = "js/active.js";
+    document.body.appendChild(script1);
 }
 
 export default ProductListItem;

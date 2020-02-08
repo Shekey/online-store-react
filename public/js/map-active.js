@@ -1,6 +1,4 @@
 /* eslint-disable */
-$( document ).ready(function() {
-
 var map;
 var latlng = new google.maps.LatLng(51.5074, 0.1278);
 var stylez = [
@@ -199,5 +197,4 @@ var mapType = new google.maps.StyledMapType(stylez, {
 });
 map.mapTypes.set('gMap', mapType);
 map.setMapTypeId('gMap');
-});
 /* eslint-disable */
